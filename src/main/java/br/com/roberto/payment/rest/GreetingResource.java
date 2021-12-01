@@ -1,4 +1,4 @@
-package br.com.roberto;
+package br.com.roberto.payment.rest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
