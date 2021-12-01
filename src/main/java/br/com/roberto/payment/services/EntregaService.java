@@ -1,10 +1,7 @@
 package br.com.roberto.payment.services;
 
-import javax.enterprise.context.ApplicationScoped;
-
 import br.com.roberto.payment.services.enums.Estado;
 
-@ApplicationScoped
 public class EntregaService {
 
 	public Double valorTaxaDeAcordoCom(Estado estado) {

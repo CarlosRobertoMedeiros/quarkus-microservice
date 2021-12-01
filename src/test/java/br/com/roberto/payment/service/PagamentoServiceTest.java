@@ -12,16 +12,21 @@ import io.quarkus.test.junit.QuarkusTest;
 
 @QuarkusTest
 public class PagamentoServiceTest {
-	
-//	@Inject
-//	PagamentoService pagamentoService;
-	
+
 	@Test
-	public void deveRetornarValorPagamento() {
+	public void deveRetornarValorPagamentoDF() {
 		EntregaService entregaService = new EntregaService();
 		ImpostoService impostoService = new ImpostoService();
 		PagamentoService pagamentoService = new PagamentoService(entregaService, impostoService);
 		assertEquals(330.1, pagamentoService.precoFinal(300.0, Estado.DF));
+	}
+	
+	@Test
+	public void deveRetornarValorPagamentoSP() {
+		EntregaService entregaService = new EntregaService();
+		ImpostoService impostoService = new ImpostoService();
+		PagamentoService pagamentoService = new PagamentoService(entregaService, impostoService);
+		assertEquals(330.2, pagamentoService.precoFinal(300.0, Estado.SP));
 	}
 
 }
